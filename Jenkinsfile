@@ -5,7 +5,7 @@ node ('ubuntu'){
        checkout scm
     }  
     stage('SAST'){
-        build 'SECURITY-SAST-SNYK'
+        snykSecurity test: true, failOnIssues: true
     }
 
     

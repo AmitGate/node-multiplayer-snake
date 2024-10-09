@@ -12,7 +12,10 @@ node ('ubuntu'){
     }
     stage('Post-to-dockerhub') {
     
-     docker.withRegistry('https://registry.hub.docker.com', 'amitdock_creds') {
+     withDockerRegistry([credentialsId: 'docker-hub-credentials-id', url: 'https://index.docker.io/v1/']) {
+    sh 'docker build -t amitgate/snake .'
+	}
+ 	{
             app.push("latest")
         			}
          }

@@ -25,8 +25,3 @@ node ('ubuntu'){
       }
  
 }
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 8e41f5fb14d1b3edb6d4d267cf0f37cdf9009077
